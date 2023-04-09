@@ -1,1 +1,1 @@
-alert("index.js");
+document.querySelector("h1").innerHTML="GOOD";
