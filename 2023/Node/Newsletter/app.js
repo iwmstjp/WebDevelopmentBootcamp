@@ -31,9 +31,17 @@ app.post("/", function(req, res){
     const options = {
         method: "POST",
         //memo
-        auth: "test:3e5838928ca2fa8a971d8267e93bc463-us17"
+        auth: "test:api"
     };
     const request = https.request(url, options, function(response){
+        if (res.statusCode === 200){
+            res.sendFile(__dirname+"/success.html");
+            console.log("ok");
+        }
+        else{
+            res.sendFile(__dirname+"/failure.html");
+            console.log("no");
+        }
         response.on("data", function(data){
             console.log(JSON.parse(data));
         })
@@ -41,6 +49,11 @@ app.post("/", function(req, res){
     request.write(jsonData);
     request.end();
 });
+
+app.post("/failure", function(req, res){
+    res.redirect('/');
+
+})
 
 app.listen(3000, function(){
     console.log("port 3000");
