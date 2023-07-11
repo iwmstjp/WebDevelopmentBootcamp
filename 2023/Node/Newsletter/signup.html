@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.83.1">
-    <title>Signin </title>
+    <title>Newsletter </title>
 
     <link rel="canonical" href="https://getbootstrap.jp/docs/5.0/examples/sign-in/">
 
@@ -49,24 +49,14 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form>
-    <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  <form method="post" action="/">
+    <img class="mb-4" src="shark.png" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Sign to Newsletter</h1>
 
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
-    </div>
+      <input type="text" class="form-control" placeholder="first name" name="first" required autofocus>
+      <input type="text" class="form-control" placeholder="family name" name="family" required>
+      <input type="email" class="form-control"  placeholder="Email" name="email" required>
 
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017–2023</p>
   </form>
